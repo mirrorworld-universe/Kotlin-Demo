@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import com.mirror.kotlindemo.placeholder.DataItem
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val newsFragmentList = mutableListOf<Fragment>()
 
         for(i in newTypeList!!){
-            newsFragmentList.add(ItemFragment(GetMockData()))
+            newsFragmentList.add(ItemFragment())
         }
 
         //实例化适配器
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         var x:Int = 0
 
         while ( x > 9) {
-            var item:DataItem = DataItem();
+            var item: DataItem = DataItem();
             item.name = "name"+x;
             item.number = x;
             item.editText1 = "edit1 -"+x;

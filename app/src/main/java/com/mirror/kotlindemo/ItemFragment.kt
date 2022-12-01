@@ -8,17 +8,14 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.mirror.kotlindemo.placeholder.DataItem
+import com.mirror.kotlindemo.placeholder.PlaceholderContent
 
 /**
  * A fragment representing a list of Items.
  */
-class ItemFragment(
-    private val values: List<DataItem>?
-) : Fragment() {
+class ItemFragment : Fragment() {
 
     private var columnCount = 1
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +38,7 @@ class ItemFragment(
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyItemRecyclerViewAdapter(values)
+                adapter = MyItemRecyclerViewAdapter(PlaceholderContent.ITEMS)
             }
         }
         return view
@@ -55,7 +52,7 @@ class ItemFragment(
         // TODO: Customize parameter initialization
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            ItemFragment(null).apply {
+            ItemFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_COLUMN_COUNT, columnCount)
                 }
