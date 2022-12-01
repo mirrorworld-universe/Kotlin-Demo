@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
         val newsFragmentList = mutableListOf<Fragment>()
 
         for(i in newTypeList!!){
-            newsFragmentList.add(ItemFragment())
+            newsFragmentList.add(ItemFragment(GetMockData()))
         }
 
-        //实例化适配器
+
         val fragmentAdapter = FragmentAdapter(this@MainActivity, newsFragmentList)
 
         var  viewPager = findViewById(R.id.viewPager) as ViewPager2
@@ -64,7 +64,8 @@ class MainActivity : AppCompatActivity() {
             item.editText1 = "edit1 -"+x;
             item.editText2 = "edit2 -"+x;
             item.editText3 = "edit3 -"+x;
-           ResultSet.add(item)
+            ResultSet.add(item)
+            x++
         }
 
         return ResultSet
