@@ -6,38 +6,38 @@ package com.mirror.kotlindemo
  * @className
  * @description TODO
  */
-class DataItem {
+data class DataItem(val name:String,var number:Int,var editText1:String,var editText2:String,var editText3:String) {
 
-    var name: String = ""
-        get() = field
-        set(value) {
-            field = value
-        }
-
-
-    var number: Int = 0
-        get() = field
-        set(value) {
-            field = value
-        }
-
-    var editText1: String = ""
-        get() = field
-        set(value) {
-            field = value
-        }
-
-    var editText2: String = ""
-        get() = field
-        set(value) {
-            field = value
-        }
-
-    var editText3: String = ""
-        get() = field
-        set(value) {
-            field = value
-        }
+//    var name: String = ""
+//        get() = field
+//        set(value) {
+//            field = value
+//        }
+//
+//
+//    var number: Int = 0
+//        get() = field
+//        set(value) {
+//            field = value
+//        }
+//
+//    var editText1: String = ""
+//        get() = field
+//        set(value) {
+//            field = value
+//        }
+//
+//    var editText2: String = ""
+//        get() = field
+//        set(value) {
+//            field = value
+//        }
+//
+//    var editText3: String = ""
+//        get() = field
+//        set(value) {
+//            field = value
+//        }
 
 
 }

@@ -1,20 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/item_number"
+        android:id="@+id/item_name"
+        android:layout_width="300dp"
+       android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:textSize="30sp"
+        android:layout_height="wrap_content"
+        android:text="namecccccccccccc"
+        android:textAppearance="?attr/textAppearanceListItem" />
+
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:textSize="24sp"
+        android:layout_height="wrap_content"
+        android:hint="sdafsdafsdafargsdgergetrgr"
+        android:id="@+id/edit_text1"
+        />
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:textSize="24sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text2"
+
+        android:hint="sdafsdafsdafargsd"
+        />
+
+    <EditText
+        android:layout_width="325dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="18dp"
+        android:textSize="24sp"
+        android:layout_height="wrap_content"
+        android:hint="sdafsdafsdafargsdfsagrgreeggr"
+        android:id="@+id/edit_text3"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/result_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
+        android:text="namecccccccc"
+        android:visibility="gone"
         android:textAppearance="?attr/textAppearanceListItem" />
 
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/confirm"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+           android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp"
+            android:layout_centerInParent="true"
+            android:text="Confirm"
+            android:textAppearance="?attr/textAppearanceListItem" />
+    </RelativeLayout>
+
+
+
 </LinearLayout>

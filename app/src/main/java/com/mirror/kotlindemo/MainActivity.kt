@@ -52,23 +52,23 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
+
     private fun GetMockData():List<DataItem>{
 
         var ResultSet = mutableListOf<DataItem>()
         var x:Int = 0
 
-        while ( x > 9) {
-            var item: DataItem = DataItem();
-            item.name = "name"+x;
-            item.number = x;
-            item.editText1 = "edit1 -"+x;
-            item.editText2 = "edit2 -"+x;
-            item.editText3 = "edit3 -"+x;
-            ResultSet.add(item)
+        while ( x < 9) {
+            ResultSet.add(createPlaceholderItem(x))
             x++
         }
 
         return ResultSet
+    }
+
+    private fun createPlaceholderItem(position: Int): DataItem {
+        return DataItem("name"+position,position,"editText1"+position,"editText2"+position,"editText3"+position)
     }
 
 
